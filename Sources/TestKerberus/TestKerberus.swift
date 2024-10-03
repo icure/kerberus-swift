@@ -1,6 +1,6 @@
 import Kerberus
 
-class Kerberus {
+public class Kerberus {
     static func resolveChallenge(config: Challenge, serializedInput: String, onProgress: @escaping (Double) -> Void) async throws -> Solution {
         return try await KerberusKt.resolveChallenge(config: config, serializedInput: serializedInput) { progress in onProgress(progress.doubleValue) }
     }
