@@ -1,0 +1,8 @@
+framework module "Kerberus" {
+    umbrella header "Kerberus.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}
