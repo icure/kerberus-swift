@@ -6,6 +6,11 @@ public struct Solution {
     public let id: String
     public let nonces: [String]
     
+    public init(id: String, nonces: [String]) {
+        self.id = id
+        self.nonces = nonces
+    }
+    
     internal func toKotlin() -> SolutionKotlin {
         return .init(id: id, nonces: nonces)
     }
