@@ -2,7 +2,7 @@ import KerberusKotlin
 
 typealias ChallengeKotlin = KerberusKotlin.Challenge
 
-public struct Challenge {
+public struct Challenge: Sendable {
     public let id: String
     public let salts: [String]
     public let difficultyFactor: Int32

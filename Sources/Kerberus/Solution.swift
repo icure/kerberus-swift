@@ -2,7 +2,7 @@ import KerberusKotlin
 
 typealias SolutionKotlin = KerberusKotlin.Solution
 
-public struct Solution {
+public struct Solution: Sendable {
     public let id: String
     public let nonces: [String]
     
