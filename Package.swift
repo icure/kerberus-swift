@@ -4,29 +4,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "TestKerberus",
+    name: "Kerberus",
     platforms: [.iOS(.v17),],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "TestKerberus",
-            targets: ["TestKerberus", "KerberusXcFramework"]),
+            name: "Kerberus",
+            targets: ["Kerberus", "KerberusXcFramework"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "TestKerberus",
+            name: "Kerberus",
             dependencies: ["KerberusXcFramework"],
             swiftSettings: [
                 .enableExperimentalFeature("StrictConcurrency")
             ]),
         .binaryTarget(
             name: "KerberusXcFramework",
-            path: "./Kerberus.xcframework"),
+            path: "./KerberusKotlin.xcframework"),
         .testTarget(
-            name: "TestKerberusTests",
-            dependencies: ["TestKerberus"]
+            name: "KerberusTests",
+            dependencies: ["Kerberus"]
         ),
     ]
 )
